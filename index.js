@@ -60,6 +60,7 @@ function identify(inputFile, callback){
   soxInfo('-s', function(value) { results.sampleCount   = value; });
   soxInfo('-D', function(value) { results.duration      = value; });
   soxInfo('-B', function(value) { results.bitRate       = value; });
+  soxInfo('-a', function(value) { results.comments      = value; });
 
   batch.end(function(err) {
     if (err) return callback(err);
